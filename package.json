@@ -1,0 +1,21 @@
+{ 
+	"name" : "correios",
+	
+	"description": "Correios Node.js library",
+	
+	"keywords": [ "correios", "track", "muamba", "sedex", "pac", "calculo" ],
+	
+	"version": "0.0.1",
+
+	"author": "Felipe K. De Boni <pkz.dev@gmail.com>",
+	
+	"dependencies": {
+		"request": ">=2.11.1",
+		"cheerio": ">=0.10.0",
+		"request": "2.11.4"
+	},
+	
+	"main": "main.js",
+	
+	"engines": { "node" : ">=0.4.0" }
+}
