@@ -48,7 +48,7 @@ New Features Coming
 
 Author
 ------
-* Felipe K. De Boni (<pkz.dev@gmail.com/>)
+* Felipe K. De Boni
 
 License:
 --------
