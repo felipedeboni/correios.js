@@ -8,6 +8,7 @@ Dependencies
 * Node 0.4.X+
 * Request 2.11.1+
 * Cheerio 0.10.0+
+* Xml2js 0.2.0+
 
 Installation
 ------------
@@ -17,6 +18,8 @@ Usage
 -----
     var correios = require('correios');
     correios.track('TRACKING_CODE', callback(err, result));
+
+    correios.getPrice(options, callback(err, result));
 
 ### Examples
     // sorry, I can't put real tracking codes because they only last 3 months
@@ -40,10 +43,47 @@ Usage
     });
     // returns the correios message saying to type a tracking code
 
+    // get price api
+    correios.getPrice({
+
+        serviceType:    "sedex",
+        from:           "88330-725",
+        to:             94010030,
+        weight:         "3",
+        handDelivery:   true,
+        width:          11,
+        height:         11,
+        length:         16
+
+    }, function( error, result) {
+
+        if ( error )
+            console.log( error );
+        else
+            console.log( result );
+
+    });
+    // returns something like: 
+    //
+    // { serviceType: 'sedex',
+    //  estimatedDelivery: 3,
+    //  GrandTotal: 49.2,
+    //  handDeliveryPrice: 4,
+    //  deliveryNoticePrice: 0,
+    //  declaredValuePrice: 0,
+    //  homeDelivery: false,
+    //  saturdayDelivery: true }
+
 New Features Coming
 -------------------
+* Better documentation
 * Unity tests
-* Post service price calculation
+* Search address by CEP
+
+Notes
+-----
+I will test it better when I have some time, but we can play with it now :) 
+I will be happy to listen to any suggestions, bug fixes or improvements.
 
 
 Author
