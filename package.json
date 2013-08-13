@@ -5,9 +5,13 @@
 	
 	"keywords": [ "correios", "track", "muamba", "sedex", "pac", "calculo" ],
 	
-	"version": "0.0.3",
+	"version": "0.0.4",
 
 	"author": "Felipe K. De Boni <pkz.dev@gmail.com>",
+
+	"contributors": [
+		{ "name": "Giovanni Bassi" }
+	],
 	
 	"dependencies": {
 		"request": 	">=2.11.1",

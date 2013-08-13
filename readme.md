@@ -90,6 +90,10 @@ Author
 ------
 * Felipe K. De Boni
 
+Contributors
+------
+* Giovanni Bassi
+
 License:
 --------
 
