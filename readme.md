@@ -44,7 +44,7 @@ Usage
     // returns the correios message saying to type a tracking code
 
     // get price api
-    correios.getPrice({
+    correios.price({
 
         serviceType:    "sedex",
         from:           "88330-725",
@@ -74,11 +74,22 @@ Usage
     //  homeDelivery: false,
     //  saturdayDelivery: true }
 
+    // get address api
+    correios.address('01001000', function(err, result) {
+        console.log(result);
+    });
+    // returns something like:
+    //{ cep: '01001-000',
+    //  logradouro: 'Praça da Sé - lado ímpar',
+    //  bairro: 'Sé',
+    //  localidade: 'São Paulo',
+    //  uf: 'SP',
+    //  ibge: '3550308' }
+
 New Features Coming
 -------------------
 * Better documentation
 * Unity tests
-* Search address by CEP
 
 Notes
 -----
