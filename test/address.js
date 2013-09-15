@@ -3,7 +3,6 @@ var correios = require('../lib/correios');
 
 // valid postal code
 correios.address('01001000', function(err, result) {
-  console.log(result);
   assert.equal(typeof result, 'object');
   assert.equal(result.cep, '01001-000');
   assert.equal(result.logradouro, 'Praça da Sé - lado ímpar');
